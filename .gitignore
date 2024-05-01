@@ -1,0 +1,16 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+.idea
+.idea
+*.iws
+*.iml
+*.ipr
+*.jar
+#*.properties
+*.log
+*.png
+
+
