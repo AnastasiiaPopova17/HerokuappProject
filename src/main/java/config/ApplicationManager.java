@@ -20,7 +20,7 @@ public class ApplicationManager {
         this.browser = browser;
     }
 
-    public void init() {
+    public WebDriver init() {
         if(browser.equals("chrome")) {
             // with tools:
             //driver = new ChromeDriver();
@@ -48,7 +48,7 @@ public class ApplicationManager {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.navigate().to("https://the-internet.herokuapp.com/");
-
+        return driver;
     }
 
     public void quit() {
