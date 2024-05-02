@@ -26,7 +26,6 @@ public class JavaScriptAlertsPage extends BasePage{
         return driver.switchTo().alert();
     }
 
-
     public JavaScriptAlertsPage clickAccept(Alert alert) {
         alert.accept();
         return this;
@@ -65,7 +64,6 @@ public class JavaScriptAlertsPage extends BasePage{
 
     public boolean verifyJSConfirmOpen() {
         clickBase(btnJSConfirm);
-        pause(5200);
         Alert alert = getAlert();
         String expectedRes = "I am a JS Confirm";
         String actualRes = getMessageAlert(alert);
@@ -75,7 +73,6 @@ public class JavaScriptAlertsPage extends BasePage{
 
     public boolean verifyTextFromJSPromtOpen(String text) {
         clickBase(btnJSPromt);
-        pause(5200);
         Alert alert = getAlert();
         typeAlertInPromt(text, alert);
         clickAccept(alert);

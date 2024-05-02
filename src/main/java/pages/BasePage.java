@@ -48,9 +48,14 @@ public abstract class BasePage {
         }
     }
 
-    private Alert getAlert() {
-        return driver.switchTo().alert();
+    protected boolean isStringsEqual(String actualRes, String expectedRes) {
+        if (actualRes.equals(expectedRes)) {
+            return true;
+        } else {
+            System.out.println("actual res: " + actualRes +
+                    " expected res " + expectedRes);
+            return false;
+        }
     }
-
 
 }
